@@ -1,0 +1,16 @@
+<ul class="list-group mb-3" *ngIf="loadedData; else loading">
+  <li class="list-group-item d-flex" *ngFor='let game of gameList'>
+    <a [routerLink]="['game', game.game_id]">
+      <i class="fas fa-folder-open"></i>
+      <span class="glyphicon glyphicon-folder-close"></span>
+      {{game.game_name}}
+    </a>
+  </li>
+</ul>
+
+<ng-template #loading>
+  Scanning list of game folders... It may takes few seconds.
+  <div class="spinner-border" role="status">
+    <span class="sr-only"></span>
+  </div>
+</ng-template>

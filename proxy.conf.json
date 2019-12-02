@@ -1,0 +1,8 @@
+{
+  "/home-assignment/*": {
+    "target": "http://content.overwolf.com/",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}

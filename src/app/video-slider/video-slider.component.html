@@ -1,0 +1,15 @@
+<carousel [interval]="false" (activeSlideChange)="onSlideChange($event)">
+  <slide *ngFor="let item of playlist">
+    <video #media
+            width="100%"
+            controls
+            [src]="item"
+            preload="auto"
+            crossorigin>
+    </video>
+  </slide>
+</carousel>
+
+
+
+
